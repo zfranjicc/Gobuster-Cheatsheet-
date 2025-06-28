@@ -1,9 +1,25 @@
-# Gobuster-Cheatsheet-
-Basic commands for Gobuster 
+
 
 
 # 🚪 Gobuster Cheat Sheet
 Personal cheat sheet with Gobuster commands used in CTFs, pentesting, and SOC analysis.
+
+## What is Gobuster?
+Gobuster is a tool used for directory and file brute-forcing on web servers. It helps discover hidden directories, files, and DNS subdomains by systematically trying many possible names from a wordlist. This is useful for penetration testing to find resources that are not linked publicly but exist on the server.
+
+### Example 
+
+Website:` http://example.com`
+
+Hidden directory: `/admin`
+
+Usually, if you visit `http://example.com/admin`, you might find an admin panel or some control page that isn't linked publicly on the main site.
+
+Gobuster tries to discover such directories by brute forcing many possible names from a wordlist, for example:
+```
+gobuster dir -u http://example.com -w /path/to/wordlist.txt
+```
+
 
 ---
 
